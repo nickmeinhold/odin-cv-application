@@ -39,7 +39,7 @@ export default function PracticalExperience({ value, onChange }) {
           />
         </div>
 
-        <div className="field" style={{ gridColumn: '1 / -1' }}>
+        <div className="field" style={{ gridColumn: "1 / -1" }}>
           <label htmlFor="responsibilities">Main responsibilities</label>
           <textarea
             id="responsibilities"
@@ -79,12 +79,21 @@ export default function PracticalExperience({ value, onChange }) {
       </form>
 
       <div className="preview">
-        <p><strong>Company:</strong> {value.company || '—'}</p>
-        <p><strong>Position:</strong> {value.position || '—'}</p>
-        <p><strong>Dates:</strong> {(value.from || '—') + ' – ' + (value.to || '—')}</p>
+        <p>
+          <strong>Company:</strong> {value.company || "—"}
+        </p>
+        <p>
+          <strong>Position:</strong> {value.position || "—"}
+        </p>
+        <p>
+          <strong>Dates:</strong>{" "}
+          {(value.from || "—") + " – " + (value.to || "—")}
+        </p>
         {responsibilities.length > 0 && (
           <>
-            <p><strong>Responsibilities:</strong></p>
+            <p>
+              <strong>Responsibilities:</strong>
+            </p>
             <ul>
               {responsibilities.map((item, idx) => (
                 <li key={idx}>{item}</li>
